@@ -4,7 +4,7 @@ import React from 'react'
 import { Hero , Sales, FlexContent, Stories} from './components'
 
 //Data
-import { heroapi , popularsales , toprateslaes , highlight , sneaker , story} from './data/data.js'
+import { heroapi , popularsales , toprateslaes , highlight , sneaker } from './data/data.js'
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
         <FlexContent endpoint={highlight} ifExists/>
         <Sales endpoint={toprateslaes}/>
         <FlexContent endpoint={sneaker}/>
-        <Stories story={story}/>
+        <Stories/>
       </main>
     </>
   )
