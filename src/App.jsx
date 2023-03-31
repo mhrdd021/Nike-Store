@@ -4,7 +4,7 @@ import React from 'react'
 import { Navbar , Hero , Sales, FlexContent, Stories , Footer, Cart} from './components'
 
 //Data
-import { heroapi , popularsales , toprateslaes , highlight , sneaker , footerAPI} from './data/data.js'
+import { heroapi , popularsales , toprateslaes , highlight , sneaker , footerAPI} from './data/Data'
 
 const App = () => {
   return (
