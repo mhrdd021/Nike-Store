@@ -25,7 +25,13 @@ const Item = ({
 
     dispatch(setAddItemToCart(item));
   };
-
+  const onCartToggle = () => {
+    dispatch(
+      setOpenCart({
+        cartState: true,
+      })
+    );
+  };
   return (
     <>
       <div
@@ -38,7 +44,7 @@ const Item = ({
       >
         <div
           className={`
-            grid items-center justify-items-center
+            grid items-center 
             ${ifExists ? "justify-items-start" : "justify-items-center"} 
             `}
         >
@@ -73,6 +79,7 @@ const Item = ({
             <button
               type="button"
               className="bg-white/90 blur-effect-theme button-theme px-2 py-1 shadow shadow-sky-200"
+              onClick={() => {onAddToCart() ; onCartToggle();}}
             >
               {btn}
             </button>

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 
 //Hook
 import { useDispatch } from 'react-redux/es/exports'
+import { useSelector } from 'react-redux/es/exports'
+import { selectTotalQTY } from '../app/CartSlice'
 //Icons
 import { HeartIcon , ShoppingBagIcon , MagnifyingGlassIcon} from "@heroicons/react/24/outline"
 //Logo
@@ -13,6 +15,7 @@ const Navbar = () => {
 const [navState , setNavState] = useState(false)
 
 const dispatch = useDispatch();
+const totalQTY = useSelector(selectTotalQTY);
 
 const onCartToggle = () => {
     dispatch(setOpenCart({
@@ -67,7 +70,7 @@ useEffect(() => {
                             w-4 h-4 text-[0.65rem] leading-tight font-medium rounded-full flex
                             item-center justify-center cursor-pointer hover:scale-110 transition-all
                             duration-300
-                            ${navState ? 'bg-slate-900 text-slate-100 shadow-slate-900' : 'bg-slate-100 text-slate-900 shadow-slate-900'}`}>0</div>
+                            ${navState ? 'bg-slate-900 text-slate-100 shadow-slate-900' : 'bg-slate-100 text-slate-900 shadow-slate-900'}`}>{totalQTY}</div>
                         </button>
                     </li>
                 </ul>

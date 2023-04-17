@@ -3,7 +3,7 @@ import React from 'react'
 //Icons
 import { ChevronDoubleLeftIcon, XMarkIcon } from "@heroicons/react/24/solid"
 
-const CartCount = ({ onCartToggle, onClearCartItem }) => {
+const CartCount = ({ onCartToggle, onClearCartItem, totalQTY }) => {
   return (
     <>
         <div className='bg-white h-11 flex item-center justify-between px-3
@@ -15,7 +15,7 @@ const CartCount = ({ onCartToggle, onClearCartItem }) => {
                 </div>
                 <div className='grid items-center'>
                     <h1 className='text-base font-medium text-slate-900'>Your Cart 
-                        <span className='text-xs mx-2 bg-theme-cart rounded px-1 py-0.5 text-slate-100 font-normal'>(items)</span>
+                        <span className='text-xs mx-2 bg-theme-cart rounded px-1 py-0.5 text-slate-100 font-normal'>({totalQTY}items)</span>
                     </h1>
                 </div>
             </div>
